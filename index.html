@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#77c9f5">
+  <title>飞翔的小鸟｜中文版</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell" aria-labelledby="game-title">
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">GAMEDEV LAB · 01</p>
+        <h1 id="game-title">飞翔的小鸟</h1>
+      </div>
+      <button id="soundButton" class="icon-button" type="button" aria-label="关闭音效" aria-pressed="true">🔊</button>
+    </header>
+
+    <section class="scoreboard" aria-label="游戏成绩">
+      <div><span>本局</span><strong id="score">0</strong></div>
+      <div><span>最佳</span><strong id="bestScore">0</strong></div>
+    </section>
+
+    <div id="gameArea" class="game-area" role="application" aria-label="飞翔的小鸟游戏区域" tabindex="0">
+      <canvas id="gameCanvas" width="720" height="960">你的浏览器不支持 Canvas。</canvas>
+      <div id="gameOverlay" class="overlay">
+        <div class="overlay-card">
+          <div class="bird-mark" aria-hidden="true">🐤</div>
+          <h2 id="overlayTitle">准备起飞</h2>
+          <p id="overlayMessage">点击屏幕、按空格键或 ↑ 让小鸟向上飞</p>
+          <button id="startButton" class="primary-button" type="button">开始游戏</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="game-footer">
+      <p><kbd>空格</kbd> / <kbd>↑</kbd> / 点击屏幕</p>
+      <button id="resetBestButton" class="text-button" type="button">清除最佳成绩</button>
+    </footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
